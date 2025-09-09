@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mas allá de la pantalla</title>
+  <style>
+    /* Paleta de colores lila pastel */
+    :root {
+      --primario: #C8A2C8;   /* lila pastel principal */
+      --secundario: #E6D0E6; /* lila más suave */
+      --fondo: #F8F0FA;      /* lavanda muy suave */
+      --texto: #4B2E4D;      /* morado oscuro */
+      --verde: #D9B3D9;      /* lila suave para bordes */
+      --acento: #BFA2D9;     /* lila medio para hover */
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primario), var(--secundario));
+      color: var(--texto);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: var(--primario);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--texto);
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      border-radius: 4px;
+      margin: 4px;
+    }
+
+    nav a:hover {
+      background: var(--acento);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      border-left: 6px solid var(--verde);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    section:hover {
+      transform: translateY(-2px);
+    }
+
+    section h2 {
+      color: var(--primario);
+      margin-top: 0;
+    }
+
+    footer {
+      background: var(--primario);
+      color: var(--texto);
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+    }
+
+    /* Ajustes para celular */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        text-align: center;
+        border-top: 1px solid rgba(75,46,77,0.3);
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      section {
+        border-left-width: 4px;
+      }
+
+      body {
+        line-height: 1.8;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mas allá de la pantalla</h1>
+    <p>texto</p>
+  </header>
+
+  <nav>
+    <a href="#introduccion">La doble cara de las redes</a>
+    <a href="#positivo">Voces detrás de las redes</a>
+    <a href="#negativo">Lo que pasa en tu mente y no ves </a>
+    <a href="#profesional">Encuentros cara a cara</a>
+  </nav>
+
+  <main>
+    <section id="introduccion">
+      <h2>La doble cara de las redes</h2>
+      <p>texto</p>
+    </section>
+
+    <section id="positivo">
+      <h2>Voces detrás de las redes</h2>
+      <p>texto</p>
+    </section>
+
+    <section id="negativo">
+      <h2>Lo que pasa en tu mente y no ves</h2>
+      <p>texto</p>
+    </section>
+
+    <section id="profesional">
+      <h2>Encuentros cara a cara</h2>
+      <p>texto</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Renata Gaboardi | Taller de redacción | UP </p>
+  </footer>
+
+</body>
+</html>
+
