@@ -1,0 +1,274 @@
+:root {
+  --header-claro: #D8B3D8;  
+  --primario: #C8A2C8;      
+  --fondo: #F8F0FA;          
+  --texto: #4B2E4D;
+  --verde: #D9B3D9;
+  --acento: #BFA2D9;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--header-claro);
+  color: var(--texto);
+  text-align: center;
+  padding: 15px 20px 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header p {
+  margin: 5px 0 10px;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: var(--primario);
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav a {
+  color: var(--texto);
+  padding: 8px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  border-radius: 4px;
+  margin: 2px;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  background: var(--acento);
+}
+
+main {
+  max-width: 1000px;
+  margin: 140px auto 20px;
+  padding: 20px;
+}
+
+main.noticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 120px 20px 30px 20px; /* ajustado para que el texto no quede debajo del header */
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #fff6fc;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--4B2E4D);
+}
+
+.noticia-video {
+  width: 100%;
+  max-width: 600px;
+  max-height: 340px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin: 20px 0;
+}
+
+.subtitulo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #7B3F7B;
+  margin: 0;
+}
+
+.noticia-pie {
+  font-style: italic;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+p {
+  margin: 10px 0;
+}
+
+section {
+  background: white;
+  border-left: 6px solid var(--verde);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  scroll-margin-top: 140px;
+}
+
+section:hover {
+  transform: translateY(-2px);
+}
+
+section h2 {
+  color: var(--header-claro);
+  margin-top: 0;
+}
+
+.extra {
+  display: none;
+}
+
+.toggle-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--header-claro);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+  background: var(--acento);
+}
+
+footer {
+  background: var(--primario);
+  color: var(--texto);
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.85rem;
+}
+
+/* Estilos para imágenes del footer */
+.footer-img {
+  width: 40px;
+  height: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.footer-img:hover {
+  opacity: 0.8;
+}
+
+/* Flechas de navegación */
+.flecha {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: var(--texto);
+  text-decoration: none;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+  z-index: 1500;
+}
+
+.flecha:hover {
+  background: var(--acento);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.flecha.izquierda { left: 10px; }
+.flecha.derecha { right: 10px; }
+
+/* Slider */
+.slider {
+  width: 80%;
+  max-width: 900px;
+  height: 420px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+  header {
+    padding: 15px 20px 90px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header p {
+    font-size: 0.75rem;
+  }
+
+  nav {
+    flex-direction: column;
+    bottom: 0;
+  }
+
+  nav a {
+    text-align: center;
+    border-top: 1px solid rgba(75,46,77,0.3);
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  section {
+    border-left-width: 4px;
+    scroll-margin-top: 120px;
+  }
+
+  body {
+    line-height: 1.8;
+  }
+
+  .flecha {
+    font-size: 2rem;
+    padding: 8px;
+  }
+}
