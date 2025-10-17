@@ -271,4 +271,10 @@ footer {
     font-size: 2rem;
     padding: 8px;
   }
+
+p {
+    line-height: 1.8;         /* separa las líneas dentro del párrafo */
+    margin-bottom: 20px;      /* separa los párrafos entre sí */
+    text-align: justify;      /* justifica el texto */
+  }
 }
